@@ -44,8 +44,6 @@ window.onload = ()=> {
 }
 
 function update() {
-	//console.time("Loop...");
-
 	if (keyQueue.length != 0) {
 		let key = keyQueue.shift();
 		if (snake.dir.x != -key[0] && snake.dir.y != -key[1]) snake.setDir(key[0], key[1]);
@@ -63,7 +61,6 @@ function update() {
 		snake.show();
 		food.show();
 	}
-	//console.timeEnd("Loop...");
 }
 
 function stop() {clearInterval(interval);}
