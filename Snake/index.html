@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snake</title>
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	#canvas {
+		position: relative;
+		background-color: #333;
+		z-index: 1;
+		overflow: hidden;
+		margin: 1em;
+		box-sizing: initial;
+		border: solid 5px #a33;
+	}
+
+	#canvas * {
+		z-index: 2;
+		position: absolute;
+	}
+
+	.snake {
+		background-color: #fff;
+		border: solid 1px #333;
+	}
+	
+	.snake:first-of-type {
+		background-color: #ddd;
+	}
+
+	.food {
+		background-color: #0a0;
+	}
+</style>
+<body>
+
+<div id="canvas"></div>
+<p id="score">0</p>
+
+<script src="app.js"></script>
+<script src="snake.js"></script>
+<script src="pos.js"></script>
+<script src="food.js"></script>
+
+</body>
+</html>
